@@ -14,7 +14,6 @@
 				width: 1000px;
 				height: 320px;
 				background: gainsboro;
-                padding-bottom: 12px;
 			}
 			.xbox{
 				position: relative;
@@ -177,11 +176,13 @@
 	</body>
 	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript"> 
-	console.log($('.box').children().eq(1))
-		$('.box').on('mouseover',function(){ 
-			$('.yc').slideToggle()
+	for (var i =0; i < $('.box').children().length;i++) {
+		$('.box').children().eq(i).on('mouseover',function(){ 
+			$('.yc').eq(1).slideToggle()
        
 		})
+		
+	}
 	     	
 	</script>
 </html>
