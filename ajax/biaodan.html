@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="" class="tt">
+			<tr><th>Name</th><td>Age</td><td>Sex</td><td>操作</td></tr>
+		</table>
+	</body>
+	<script src="../xiaomi/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		$.ajax({
+//			type:"get",
+//			url:"json.json",
+//			dataType:"json",
+//			success:function(data){
+//				
+//			}
+//		});
+var json = [
+{
+  "id": 1 , "name":"赵四","age":38,"sex":"男"
+ 
+ },
+ {
+  "id": 1 ,"name":"赵四","age":38,"sex":"男"
+ 
+ },
+ {
+  "id": 1 ,"name":"赵四","age":38,"sex":"男"
+ 
+ },
+ {
+  "id": 1 ,"name":"赵四","age":38,"sex":"男"
+ 
+ },
+ {
+  "id": 1 ,"name":"赵四","age":38,"sex":"男"
+ 
+ },
+ {
+  "id": 1 ,"name":"赵四","age":38,"sex":"男"
+ 
+ }
+ 
+]
+
+for(var i = 0 ; i < json.length;i++){
+    var a =`<tr><th>赵四</th><td>38</td><td>男</td><td><button>删除</button></td></tr>`
+    $('.tt').append(a)
+	
+}
+$('.tt').on('click','button',function(){
+	alert('确定要删除吗')
+	this.parentNode.parentNode.remove()
+})
+	</script>
+</html>
